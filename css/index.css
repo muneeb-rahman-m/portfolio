@@ -642,6 +642,8 @@ input[type="button"]:hover
 
 #rnd.animation
 {
+	transition: all 0.4s ease-in-out;
+	transform:translateX(0px);
 	-webkit-transition: all 0.4s ease-in-out; 
 	-webkit-transform:translateX(0px); 
 	-moz-transition: all 0.4s ease-in-out; 
@@ -651,6 +653,8 @@ input[type="button"]:hover
 }
 #rnd.animation:hover 
 {
+	transition: all 0.4s ease-in-out; 
+	transform:translateX(20px);
 	-webkit-transition: all 0.4s ease-in-out; 
 	-webkit-transform:translateX(20px);
 	-moz-transition: all 0.4s ease-in-out; 
