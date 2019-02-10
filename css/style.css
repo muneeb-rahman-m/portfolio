@@ -1,0 +1,671 @@
+@import "fonts/fontface.css";
+/* =================== Getting the new tags to behave START ====================== */
+
+article, aside, audio, canvas, command, datalist, details, embed, figcaption, figure, footer, header, hgroup, keygen, meter, nav, output, progress, section, source, video {
+	display: block;
+}
+mark, rp, rt, ruby, summary, time {
+	display: inline
+}
+/* ==================== Getting the new tags to behave END ======================= */
+
+
+/* ========================= Global properties START ============================= */
+html, body {
+	height:100%;
+}
+html {
+	min-width:990px;
+}
+body {
+	background-color:#000000;
+	font-family: 'ArimoRegular';
+	font-size:12px;
+	line-height:18px;
+	color:#333333;
+}
+div {
+	border: 0 none;
+	font-size: 100%;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	vertical-align: top;
+}
+dl,hr,h1,h2,h3,h4,h5,h6,ol,ul,pre,address,fieldset,blockquote,article,p { margin-bottom: 20px;  }
+h1,h2,h3,h4,h5,h6,ol,ul,pre,table,address,fieldset,blockquote,article,p { font-family:'ArimoRegular'; font-weight:normal;}
+h1 {
+	font-size:40px;	
+	line-height:40px;
+	font-family: 'UbuntuBold';
+	letter-spacing:-1px;		
+}
+h2 {
+	font-size:32px;	
+	line-height:32px;	
+}
+h3 {	
+	font-size:24px;
+	line-height:28px;		
+}
+h4 {	
+	font-size:18px;	
+	line-height:18px;	
+}
+h5 {
+	font-size:14px;	
+	line-height:18px;
+}
+h6 {
+	font-size:13px;
+	line-height:18px;
+	
+}
+p {
+	line-height:18px;
+	
+}
+
+.color_green {
+	color:#45d43e;
+}
+.color_grey {
+	color:#333333;
+}
+.color_black {
+	color:#000000;
+}
+.color_white {
+	color:#ffffff;
+}
+.button, input[type="submit"], input[type="text"], textarea {
+	font-size:16px;
+	color:#333333;
+	box-shadow:inset 0 0 0px #aaaaaa, 2px 2px 1px #aaaaaa;
+	-khtml-box-shadow:inset 0 0 0px #aaaaaa, 2px 2px 1px #aaaaaa;
+	-moz-box-shadow:inset 0 0 0px #aaaaaa, 2px 2px 1px #aaaaaa;
+	-ms-box-shadow:inset 0 0 0px #aaaaaa, 2px 2px 1px #aaaaaa;
+	-o-box-shadow:inset 0 0 0px #aaaaaa, 2px 2px 1px #aaaaaa;
+	-webkit-box-shadow:inset 0 0 0px #aaaaaa, 2px 2px 1px #aaaaaa;
+	padding:5px 10px;
+	//-webkit-border-radius: 30px;
+	//-moz-border-radius: 30px;
+	//border-radius: 30px;
+	background-color:#9d97ef;
+	font-family:'ArimoRegular';
+	-moz-transition:all 0.3s linear;
+	-webkit-transition:all 0.3s linear;
+	-o-transition:all 0.3s linear;
+	-ms-transition:all 0.3s linear;
+	transition:all 0.3s linear;
+	cursor:default;
+}
+.button:hover, input[type="submit"]:hover, input[type="text"]:hover, textarea:hover {
+	box-shadow:inset 0 0 15px #666666, 2px 2px 1px #aaaaaa;
+	-khtml-box-shadow:inset 0 0 15px #666666, 2px 2px 1px #aaaaaa;
+	-moz-box-shadow:inset 0 0 15px #666666, 2px 2px 1px #aaaaaa;
+	-ms-box-shadow:inset 0 0 15px #666666, 2px 2px 1px #aaaaaa;
+	-o-box-shadow:inset 0 0 15px #666666, 2px 2px 1px #aaaaaa;
+	-webkit-box-shadow:inset 0 0 15px #666666, 2px 2px 1px #aaaaaa;
+	background-color:#ffffff;
+	-moz-transition:all 0.3s linear;
+	-webkit-transition:all 0.3s linear;
+	-o-transition:all 0.3s linear;
+	-ms-tranmsition:all 0.3s linear;
+	transition:all 0.3s linear;
+	color:#000000;
+	cursor:pointer;
+}
+.button a {
+	font-size:14px;
+	color:#333333;
+	text-decoration:none;
+}
+.button a:hover {
+	color:#000000;
+}
+/* ========================= Global properties END =============================== */
+
+
+/* ========================= Global Structure START ============================== */
+#maincontainer {
+	width:100%;
+	position:fixed;	
+	height:100%;
+	margin:0 auto;	
+	z-index:1;
+	background-color: rgb(200,200,200);
+	overflow:hidden;
+}
+#slideshow {
+    position:fixed;
+    height:100%;
+	opacity:.7;
+	
+}
+
+#slideshow IMG {
+    position:fixed;
+    top:0;
+    z-index:8;
+    opacity:0.0;
+	
+}
+
+#slideshow IMG.active {
+    z-index:10;
+    opacity:1.0;
+}
+
+#slideshow IMG.last-active {
+    z-index:9;
+}
+
+
+#main {
+	width:1100px;
+	margin:0 auto;
+	position:relative;
+	height:95%;
+	
+}
+/* ========================= Global Structure END ================================ */
+
+
+/* ====================== Left & Right alignment START =========================== */
+
+
+.align_left {
+	text-align: left;
+}
+.align_center {
+	text-align:center;
+}
+.align_right {
+	text-align:right;
+}
+.alignleft {
+	float: left;
+	margin-right:1.5em;
+}
+.alignleft_pic {
+	float:left;
+	margin-right:10px;
+	padding-top:0px;
+}
+.alignleft20 {
+	float:left;
+	margin-right:20px;
+}
+.alignright20 {
+	float:right;
+	margin-left:20px;
+	box-shadow: 0px 0px 22px black;
+}
+.alignright {
+	float: right;
+	margin-left:1.5em;
+}
+.topmargin {
+	margin-top:10px;
+}
+.imgcenter {
+	display: block;
+	margin: 10px auto 10px;
+}
+.aligncenter, div.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto
+}
+.pic {
+	
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	
+}
+
+.pic:hover {
+	background:black;
+	-moz-transition: all 0.2s linear 0s;
+	-webkit-transition: all 0.2s linear 0s;
+	-o-transition: all 0.2s linear 0s;
+	opacity: 0.8;
+}
+
+.wrapper {
+	width: 100%;
+	overflow: hidden;
+}
+.clear {
+	clear: both;
+	margin-bottom:30px;
+}
+/* ====================== Left & Right alignment END ============================= */
+
+
+/* ============================== header START =================================== */
+header {
+	margin:20px auto;
+	position:relative;
+	height:auto;
+	z-index:222;
+}
+header a {
+	text-decoration:none;
+}
+header #logo h1 {
+	font-size:100px;
+	font-weight:normal;
+	text-decoration:none;
+	text-shadow:3px 3px 5px #000000;
+	text-align:center;
+	font-family: 'Eceletic';
+	margin-bottom:10px;
+}
+
+.logo
+{
+	color:#45d43e;
+	font-family: 'Eklektic';
+}
+
+header .slogan {
+	text-shadow:3px 3px 5px #000000;
+	text-align:center;
+	font-size:20px;
+	font-family: 'UbuntuRegular';
+}
+/* =============================== header END ==================================== */
+
+
+/* ============================= container START =================================== */
+#content {
+	position:absolute;
+	left:360px;
+	top:20px;
+	overflow:hidden;
+	height:458px;
+	padding-left:0px;
+}
+#content>dd, #content>dt {
+	float:left;
+	margin:0 1px 0 0;
+	height:460px;
+	position:relative;
+}
+#content>dt {
+	z-index:5;
+	width:59px;
+	background:url(../images/hasico.png) no-repeat;
+}
+#content>dd {
+	width:680px;
+	overflow:hidden;
+	position:relative;
+	z-index:1;
+}
+#content>dt a {
+	width:59px;
+	height:459px;
+	background:url(../images/hasico.png) no-repeat;
+	display:block;
+}
+#content>.dt1 {
+	background-position:0 0;
+}
+#content>.dt1 a {
+	background-position:0 -460px;
+}
+#content>.dt2 {
+	background-position:-60px 0;
+}
+#content>.dt2 a {
+	background-position:-60px -460px;
+}
+#content>.dt3 {
+	background-position:-120px 0;
+}
+#content>.dt3 a {
+	background-position:-120px -460px;
+}
+#content>.dt4 {
+	background-position:-180px 0;
+}
+#content>.dt4 a {
+	background-position:-180px -460px;
+}
+#content>.dt5 {
+	background-position:-240px 0;
+}
+#content>.dt5 a {
+	background-position:-240px -460px;
+}
+#content>.dt6 {
+	background-position:-300px 0;
+}
+#content>.dt6 a {
+	background-position:-300px -460px;
+}
+
+
+#content .inner {
+	background-color:#FFFFFF;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	margin-left: 0px;
+	height:459px;
+	position:relative;
+}
+
+article {
+	padding:10px 20px;
+	width:680px;
+	max-width:680px;
+}
+/* ============================== container END ==================================== */
+
+
+/* ============================== main START ==================================== */
+
+#slider {
+	width:680px;
+	height:459px;	
+	background:url(../images/loading.gif) no-repeat 50% 50%;
+	position:relative;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+}
+#info
+{
+	position: absolute;
+	background-color: black;
+	opacity: .7;
+	bottom:0px;
+	z-index: 4444;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	padding: 10px;
+	text-align: center;
+}
+
+#info p
+{
+	color: white;
+	font-size: 14px;
+	font-weight: normal;
+	text-shadow: 0px 0px 2px black;
+	font-family: Tahoma;
+	line-height: 18px;
+	opacity: 1;
+}
+#slider img {
+	position:absolute;
+	top:0px;
+	left:0px;
+	display:none;
+}
+
+#slider a {
+	border:0;
+	display:block;	
+}
+.nivo-controlNav {
+	position:absolute;
+	left:260px;
+	bottom:-42px;
+}
+.nivo-controlNav a {
+	display:block;
+	width:18px;
+	height:18px;
+	background:url(../images/bullets.png) no-repeat;
+	text-indent:-9999px;
+	border:0;
+	margin-right:0px;
+	float:left;
+	left:320px;
+	bottom:60px;
+}
+.nivo-controlNav a.active {
+	background-position:0 -22px;
+}
+
+.nivo-directionNav a {
+	position:absolute;
+	top:206px;
+	z-index:99;
+	cursor:pointer;
+	width:48px;
+	height:48px;
+	text-indent: -500px;
+	overflow:hidden;
+	background: url(../images/slider_arrows.png) top left no-repeat;
+}
+
+
+
+.nivo-prevNav {
+	left:10px;
+}
+
+.nivo-prevNav:hover{
+	background-position: 0 -48px !important;
+}
+
+.nivo-nextNav {
+	right:10px;
+	background-position: -48px 0 !important;
+}
+.nivo-nextNav:hover{
+	background-position: -48px -48px !important;
+}
+
+/* ============================== main END ==================================== */
+
+/* ============================== Scroll Pane START ==================================== */
+
+.scroll-pane {
+	width: 610px;
+	overflow: auto;
+	float: left;
+	padding-right:30px;
+	
+}
+
+
+.pane1, #pane2, #pane3, #pane4{
+	height: 360px;
+}
+
+/* ============================== Scroll Pane END ==================================== */
+
+/* ============================== about us START ==================================== */
+
+
+.about li {
+	padding:0px 0px 20px 0px;
+	
+}
+
+
+.about ul li h6
+{
+	line-height: 15px;
+}
+
+.intro
+{
+	line-height: 10px;
+}
+
+.about .col_left {
+	width:275px;
+	height:auto;
+	float:left;
+	margin-bottom:20px;
+}
+.about .col_right {
+	width:275px;
+	height:auto;
+	float:right;
+	margin-bottom:20px;
+}
+
+
+/* ============================== about us END ==================================== */
+
+
+/* ============================= Nature of buisness START ===================================== */
+
+#gallery {
+	height: 400px;
+	overflow:hidden;
+	padding-top:10px;
+}
+
+.menu li
+{
+	margin-left: 40px;
+	padding-bottom: 10px;
+	text-align: left;
+	font-family: tahoma;
+	font-size: 10pt;
+	height: auto;
+}
+/* ============================= Nature of buisness END ===================================== */
+
+
+/* ============================= Enquiry START ===================================== */
+
+#enquiry td
+{
+	padding: 10px 10px;
+	font-family: Tahoma;
+	font-size: 14px;
+}
+
+#gallery
+{
+	position:relative;
+	overflow: hidden;
+	width: 600px;
+	height:200px;
+}
+
+#container
+{
+	position:absolute;
+	left:0px;
+	width:1800px;
+	height:200px;
+	overflow: hidden;
+	margin:2px auto;
+}
+
+.image_info
+{
+	float: left;
+	width:192px;
+	height:182px;
+	margin: auto 5px;
+}
+
+#gallery_buttons
+{
+	margin: 5px auto;
+}
+#left
+{
+	cursor: pointer;
+	display:inline-block;
+	background: url(../images/l_arrow.png) no-repeat;
+	width:50px;
+	height:44px;
+}
+#left:hover
+{
+	background-position: 0px -44px;
+}
+
+#right
+{
+	cursor: pointer;
+	display:inline-block;
+	background: url(../images/r_arrow.png) no-repeat;
+	width:50px;
+	height:44px;
+}
+
+#right:hover
+{
+	background-position: 0px -45px;
+}
+/* ============================= Enquiry END ===================================== */
+
+/* ============================= Contact us START ===================================== */
+
+.contact li
+{
+	display: block;
+	padding: 10px 10px;
+	font-size: 15px;
+	position: relative;
+	width:245px;
+	height:auto;
+	text-align: justify;
+	line-height: 1.5;
+}
+
+.plugin
+{
+	position: relative;
+	width:245px;
+	height:auto;
+}
+
+.left_col, .right_col
+{
+	float:left;
+	margin: 5px 25px;
+}
+
+.plug
+{
+	padding: 15px 0px;
+}
+
+
+/* ============================== Contact us END ====================================== */
+
+
+/* ============================ footer START ===================================== */
+footer {
+	height:auto;
+	width:100%;
+	float:left;
+	padding:15px 0px 15px 0px;
+	position:relative;
+	z-index:1111111;
+	cursor:default;
+}
+footer a {
+	color:#ffffff;
+}
+footer a:hover
+{
+	color: rgb(110,100,212);
+}
+footer .privacy {
+	color:#ffffff;
+	font-size: 15px;
+	text-align:center;
+	margin:10px auto;
+}
+/* ============================= footer END ====================================== */
+
