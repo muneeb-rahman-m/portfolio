@@ -16,7 +16,6 @@ window.onload = function init()
 	var time = new Kinetic.Layer();
 	var cover = new Kinetic.Layer();
 	var fnt = new Kinetic.Layer();
-	//var apps = new Kinetic.Layer();
 
 	// global variables declaration
 	var layer = 0;
